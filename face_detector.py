@@ -15,3 +15,6 @@ while True:
     h = cv2.waitKey(40) & 0xff
     if h == 40:
         break
+
+b.release()
+cv2.destroyAllWindows()
