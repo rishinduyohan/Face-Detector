@@ -6,6 +6,9 @@ a = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_defau
 # Start webcam
 b = cv2.VideoCapture(0)
 
+#for FPS calculate
+prev_time =0;
+
 while True:
     c_rec, d_img = b.read()
     if not c_rec:
