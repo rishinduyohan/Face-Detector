@@ -38,6 +38,9 @@ while True:
     fps = 1 / (currentTime - prev_time) if prev_time else 0
     prev_time = currentTime
 
+    cv2.putText(d_img, f"FPS: {int(fps)}", (d_img.shape[1] - 120, 30),
+                cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2, cv2.LINE_AA)
+
     # Show image
     cv2.imshow('img', d_img)
 
