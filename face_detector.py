@@ -33,6 +33,11 @@ while True:
     cv2.putText(d_img, timestamp, (10, d_img.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX,
                 0.6, (200, 200, 200), 2, cv2.LINE_AA)
 
+    #FPS calculate
+    currentTime = time.time()
+    fps = 1 / (currentTime - prev_time) if prev_time else 0
+    prev_time = currentTime
+
     # Show image
     cv2.imshow('img', d_img)
 
